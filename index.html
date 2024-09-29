@@ -70,14 +70,14 @@
     <h1 id="hello-world">Hello World:</h1>
     <p>Now that you have a decent, brief understanding of what statements and functions are in C++, 
         let's go to the Hello, World! program and take a high-level look at what it does.</p>
-    <pre class="code">
-    <code class="cpp"></code>#include &lt;iostream&gt;
-    
+        <pre class="code"><code class="cpp">
+#include &lt;iostream&gt;
+        
 int main() {
-   std::cout << "Hello world!";
-   return 0;
-}</code>
-</pre>
+    std::cout &lt;&lt; "Hello world!";
+    return 0;
+}</code></pre>
+        
       <p>Line 1 is a special line called a preprocessor directive. This <span class="highlightbox"><b>#include</b></span> preprocessor directive indicates that we should use the contents 
           of the <span class="highlightbox"><b>iostream</b></span> library, which is part of the C++ standard library. <span class="highlightbox"><b>Iostream</b></span> allows us to read/write text to/from the console.</p>
 
@@ -99,19 +99,16 @@ int main() {
       <p>C++ has syntax too, rules about how your program must be constructed in order to be considered valid by the compiler. The compiler is responsible 
           for making sure you follow the syntax of C++. If you have syntax errors, then the compiler will flag the line as a syntax error.</p>
       <p>Lets see what happens when we get rid of the semicolon on Line 5 of "Hello, World!"</p>
-      <div class="code">
-  <pre>#include &lt;iostream&gt;
+      <pre class="code"><code class="cpp">#include &lt;iostream&gt;
 
 int main() {
-   std::cout << "Hello world!"
-   return 0;
-}</pre>
-</div>
+    std::cout << "Hello world!"  // Missing semicolon
+    return 0;
+}</code></pre>
+
       <p>Your IDE (Integrated Development Environment) like Visual Studio Code will output an error:</p>
-      <div class="code">
-  <pre>c:\vcprojects\hello.cpp(6): error C2143: 
-      syntax error : missing ';' before 'return'</pre>
-</div>
+      <pre class="code"><code class="cpp">c:\vcprojects\hello.cpp(6): error C2143: syntax error : missing ';' before 'return'</code></pre>
+
       <p>The compiler reports an error on line 6, indicating a missing semicolon before the return statement. 
           This error might stem from line 5, where a semicolon is conventionally expected.</p>
       <p>Syntax errors are common when writing a program; fortunately, they're typically straightforward to fix, as the 
@@ -132,21 +129,20 @@ int main() {
       <p>Multi-line comments span multiple lines, starting with <span class="highlightbox"><b>/*</b></span> and ending with <span class="highlightbox"><b>*/</b></span>. 
           These are helpful for explaining longer sections of code.</p>
       <p>Example:</p>
-      <div class="code">
-  <pre>/* This is a multi-line comment.
+      <pre class="code"><code class="cpp">/* This is a multi-line comment.
    This line will be ignored.
-   So will this one. */</pre>
-</div>
+   So will this one. */</pre></code>
+
        <p>Since everything is between the symbols is ignored, you will sometimes see
        programmers make the code more nice looking</p>
-       <div class="code"><pre>/* This is a multi-line comment.
+       <pre class="code"><code class="cpp">/* This is a multi-line comment.
  * the matching asterisks to the left
  * can make this easier to read
- */</pre></div>
+ */</pre></code>
        <p>Multi-line comments cannot be nested, as it would cause a compile error</p>
-       <div class="code"><pre>/* This is a multi-line /* comment */ 
+       <pre class="code"><code class="cpp">/* This is a multi-line /* comment */ 
 this is not inside the comment */
-// The above comment ends at the first */, not the second */<pre></div>
+// The above comment ends at the first */, not the second *</pre></code>
        <p>When the compiler tries to compile this, it will ignore everything from the first 
            <span class="highlightbox"><b>/* to the first /*</b></span>. Since this is <span class="highlightbox"><b>not inside the comment */</b></span> is not
        considered part of the comment, the compiler will try and result in a compile error.</p>
@@ -206,7 +202,7 @@ this is not inside the comment */
         <p>Heres an example of a variable named <span class="highlightbox"><b>x</b></span>:
         </p>
 
-        <div class="code"><pre>int x; // define a variable named x, of type int<pre></div>
+        <pre class="code"><code class = "cpp">int x; // define a variable named x, of type int</pre></code>
 
         <p>At compile time, when the compiler sees this statement it makes a note to itself that we are defining a variable,
             giving it the name <span class="highlightbox"><b>x</b></span> and specifying it as an <span class="highlightbox"><b>int</b></span>.
@@ -228,7 +224,9 @@ this is not inside the comment */
             Integers are just one of many data types that C++ uses out of box, 
             here is an example of defining a variable using data type double:
         </p>
-        <div class="code"><pre>double width; // define a variable named width, of type double</pre></div>
+
+        <pre class="code"><code class = "cpp">double width; // define a variable named width, of type double</pre></code>
+
         <p>C++ also allows you to create your own custom types.
             For the beginning, well stick with integer variables because they are simple. 
             Soon we will learn <span class="highlightbox"><b>double</b></span>.
@@ -238,29 +236,33 @@ this is not inside the comment */
             these two snippets will be pretty much the same:
         </p>
 
-        <div class="code"><pre>int a;
-int b;</pre></div>
+        <pre class="code"><code class = "cpp">int a;
+int b;</pre></code>
 
         <p>is the same as:</p>
 
-        <div class="code"><pre>int a, b;</pre></div>
+        <pre class="code"><code class = "cpp">int a, b;</pre></code>
         
         <p>When defining multiple variables this way, there are two 
             common mistakes that new programmers tend to make:
         </p>
+
         <p>The first mistake is giving each variable a type when defining a variable in sequence.</p>
-        <div class="code"><pre>int a, int b; // wrong (compiler error)
-int a, b; // correct</pre></div>
+
+        <pre class="code"><code class = "cpp">int a, int b; // wrong (compiler error)
+int a, b; // correct</pre></code>
+
         <p>The second mistake is to try to define varables 
             of different types in the same statement, which is not allowed. 
             Variables of different types must be defined in seperate statements.
         </p>
-        <div class="code"><pre>int a, double b; // wrong (compiler error)
+
+        <pre class="code"><code class = "cpp">int a, double b; // wrong (compiler error)
 
 int a; double b; // correct (but not recommended)
 // correct and recommended (easier to read)
 int a;
-double b;</pre></div>
+double b;</pre></code>
 
 <div class="best-practice">
     <h1>Best practice</h1>
@@ -286,16 +288,16 @@ double b;</pre></div>
                 <span class="highlightbox"><b>assignment operator</b></span>.
             </p>
 
-            <div class="code"><pre>int width; // define an integer variable named width
+            <pre class="code"><code class = "cpp">int width; // define an integer variable named width
 width = 5; // assignment of value 5 into variable width
                 
-// variable width now has value 5</pre></div>
+// variable width now has value 5</pre></code>
 
             <p>By default, assignment copies the value on the right-hand side of the <span class="highlightbox"><b>=</b></span> operator, 
                 the variable on the left-hand side of the operator. This is called a <span class="highlightbox"><b>copy assignment</b></span>.
             </p>
             <p>Heres an example where we use the assignment twice:</p>
-            <div class="code"><pre>#include <iostream>
+            <pre class="code"><code class = "cpp">#include <iostream>
 
 int main()
 {
@@ -309,9 +311,12 @@ int main()
     std::cout << width; // prints 7
                 
     return 0;
-}</pre></div>
+}</pre></code>
+
             <p>This prints:</p>
-            <div class="code"><pre>57</pre></div>
+
+            <pre class="code"><code>57</pre></code>
+
             <p>When we assign value 7 to variable width, the value 5 that 
                 was there, is overwritten. Normal variables only hold one value at a time.
             </p>
@@ -332,9 +337,9 @@ int main()
                     during definition using a syntax called an initializer.
                 </p>
 
-                <div class="code"><pre>int width { 5 }; // define variable width and initialize with initial value 5
+                <pre class="code"><code class = "cpp">int width { 5 }; // define variable width and initialize with initial value 5
 
-// variable width now has value 5</pre></div>
+// variable width now has value 5</pre></code>
 
                 <p>In the above initialization of variable width, { 5 } is the initializer, 
                     and 5 is the initial value.
@@ -344,7 +349,7 @@ int main()
                     so we will provide a simplified view to get started
                 </p>
 
-                <div class="code"><pre>int a;         // default-initialization (no initializer)
+                <pre class="code"><code class = "cpp">int a;         // default-initialization (no initializer)
 
 // Traditional initialization forms:
 int b = 5;     // copy-initialization (initial value after equals sign)
@@ -352,7 +357,7 @@ int c ( 6 );   // direct-initialization (initial value in parenthesis)
                     
 // Modern initialization forms (preferred):
 int d { 7 };   // direct-list initialization (initial value in braces)
-int f {};      // value-initialization (empty braces)</pre></div>
+int f {};      // value-initialization (empty braces)</pre></code>
 
                 <h1>Default-initialization</h1>
                 <p>
@@ -364,7 +369,9 @@ int f {};      // value-initialization (empty braces)</pre></div>
                     When an intial value is provided after an equal sign, the 
                     <span class="highlightbox"><b>__copy-initialization</b></span>. This form is was from C language.
                 </p>
-                <div class="code"><pre>int width = 5; // copy-initialization of value 5 into variable width</pre></div>
+
+                <pre class ="code"><code class = "cpp">int width = 5; // copy-initialization of value 5 into variable width</pre></code>
+
                 <p>Much like copy-assignment, copy-initialization copies the value on the right-hand side of the equals into the variable being 
                     created on the left-hand side. In the above snippet, variable <span class="highlightbox"><b>width</b></span> will be initialized with value 
                     <span class="highlightbox"><b>5</b></span>.
@@ -385,6 +392,7 @@ int f {};      // value-initialization (empty braces)</pre></div>
                     When an intial value is provided in parentheses, the 
                     <span class="highlightbox"><b>direct-initialization</b></span> is used.
                 </p>
-                <div class="code"><pre>int width ( 5 ); // direct-initialization of value 5 into variable width</pre></div>
+
+                <pre class = "code"><code class = "cpp">int width ( 5 ); // direct-initialization of value 5 into variable width</pre></code>
 </body>
 </html
