@@ -51,15 +51,15 @@ hr {
     border: 2px solid white;
     background-color: #333;
     color: white;
-    padding: 10px; /* Use a specific padding */
+    padding: auto;
     text-align: left;
     margin: 10px 0;
     white-space: pre;
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
-    width: 100%; /* Full width */
-    max-width: 100%; /* Prevent overflow */
-    box-sizing: border-box; /* Include padding and border in width calculations */
-    display: block; /* Ensure it occupies full width */
+    overflow-x: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; 
+    display: block; 
 }
 
   
