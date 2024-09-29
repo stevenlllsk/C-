@@ -133,9 +133,9 @@ int main() {
  * can make this easier to read
  */</pre></div>
        <p>Multi-line comments cannot be nested, as it would cause a compile error</p>
-       <div class="code"><pre/* This is a multi-line /* comment */ 
+       <div class="code"><pre>/* This is a multi-line /* comment */ 
 this is not inside the comment */
-// The above comment ends at the first */, not the second */pre></div>
+// The above comment ends at the first */, not the second */<pre></div>
        <p>When the compiler tries to compile this, it will ignore everything from the first 
            <span class="highlightbox"><b>/* to the first /*</b></span>. Since this is <span class="highlightbox"><b>not inside the comment */</b></span> is not
        considered part of the comment, the compiler will try and result in a compile error.</p>
