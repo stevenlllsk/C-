@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearningC++</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 class="chapter">Chapter 1.1: Statements and structure of a program</h1>
+    <h1>Statements:</h1>
+    <p>A computer program is a sequence of instructions that tells the computer what to do.
+        A statement is a type of instruction that tells the program to perform some action. 
+        Statements are the most common type of instruction in a C++ program because they are the smallest 
+        independent unit of computation in C++, so they function like sentences in natural language.    
+    <p>When we talk or convey an idea 
+        to another person, we typically speak or write in sentences, so in C++, we write in 
+        statements instead. Almost all (not always) statements will 
+        end in a semicolon. In C++, a single statement could compile into many Machine Language Instructions</p>
+    <h1>The different types of statements:</h1>
+    <p>• Declaration statements</p>
+    <p>• Jump statements</p>
+    <p>• Expression statements</p>
+    <p>• Compound statements</p>
+    <p>• Selection statements (conditionals)</p>
+    <p>• Iteration statements (loops)</p>
+    <p>• Try blocks</p>
+    <h1>Functions and Main Functions:</h1>
+    <p>In C++, statements are grouped into units called functions. 
+        A function is a collection of statements executed 
+        sequentially (in order). When you learn more, you will be able 
+        to create some pretty awesome functions.</p>
+    <div class="rule-box">
+        <h1>Rule</h1>
+        <p>Every function must have a special function named main (all lowercase). 
+            When the program is compiled and run, the statements inside main are run 
+            in sequential order.</p>
+    </div>
+    <p>Programs usually terminate after running after the last statement inside 
+        the function main has been executed. (Though due to bugs or mistakes, the code may terminate 
+        early, so make sure not to mess up.)</p>
+    <p>Functions are typically written to do a specific job or perform some useful action. 
+        A function named <span class="highlighbox"><b> max </b></span> might have a statement that 
+        figures out which number is larger.</p>
+    <p>A function called <span class="highlightbox"><b>calculateGrade</b></span> may calculate a student's grade from tests, quizzes, or homework. 
+        A function named <span class="highlightbox"><b>printEmployee</b></span> might print stored information on an employee to the console. Remember, functions 
+        are used as a common organizational tool.</p>
+    <div class="nomenclature"><h1>Nomenclature</h1><p>When discussing functions, it's fairly common shorthand to append a pair of parentheses to the end of 
+        a function's name. For example, if you see <span class="highlightbox"><b>main()</b></span> or <span class="highlightbox"><b>doSomething()</b></span> , these are shorthand 
+        functions named <span class="highlightbox"><b>main</b></span> 
+        or <span class="highlightbox"><b>doSomething</b></span>.</p></div>
+        
+    <h1>Hello World:</h1>
+    <p>Now that you have a decent, brief understanding of what statements and functions are in C++, 
+        let's go to the Hello, World! program and take a high-level look at what it does.</p>
+    <div class="code">
+  <pre>#include &lt;iostream&gt;
+
+int main() {
+   std::cout << "Hello world!";
+   return 0;
+}</pre>
+</div>
+      <p>Line 1 is a special line called a preprocessor directive. This <span class="highlightbox"><b>#include</b></span> preprocessor directive indicates that we should use the contents 
+          of the <span class="highlightbox"><b>iostream</b></span> library, which is part of the C++ standard library. <span class="highlightbox"><b>Iostream</b></span> allows us to read/write text to/from the console.</p>
+
+      <p>We need this line in order to use <span class="highlightbox"><b>std::cout</b></span> on line 5. Excluding this would cause a compilation error on line 5, as the compiler 
+          would not know what <span class="highlightbox"><b>std::cout</b></span> is because <span class="highlightbox"><b>iostream</b></span> is not included.</p>
+      <p>Line 2 is blank and will not be compiled by the compiler, just like comments. The blank space serves to make it more readable for humans.</p>
+      <p>Line 3 tells the compiler that we are going to write (define) whos name (identifier) and this function will produce an int(An Integer)</p>
+      <p>Lines 4-7 tell the compiler which lines are part of the <span class="highlightbox"><b>main</b></span> function. Everything between the opening curly brace on 
+          line 4 and the closing curly brace on line 7 is considered part of the <span class="highlightbox"><b>main function</b></span>. This is called the <span class="highlightbox"><b>function body</b></span>.</p>
+      <p>Line 5 is the first statement within the <span class="highlightbox"><b>main function</b></span> and is the first statement that executes when we run the program. 
+          <span class="highlightbox"><b>std::cout</b></span> (stands for <span class="highlightbox"><b>character output</b></span>) 
+          and the <span class="highlightbox"><b><< operator</b></span> displays information in the console.</p>
+      <p>Line 6 is a <span class="highlightbox"><b>return statement</b></span> that sends 0 to the Operating System (OS), signaling successful execution of the program. It’s the last 
+          statement to run, completing the program.</p>
+      <p>When you compile and run you will see <span class="highlightbox"><b>Hello, World!</b></span>in the console.</p>
+      <h1>Syntax and Syntax Errors:</h1>
+      <p>In English, sentences are constructed according to grammatical rules that you learned in school. For example, normal sentences end with a period. 
+          That is syntax. If there is no period, then that is a syntax error.</p>
+      <p>C++ has syntax too, rules about how your program must be constructed in order to be considered valid by the compiler. The compiler is responsible 
+          for making sure you follow the syntax of C++. If you have syntax errors, then the compiler will flag the line as a syntax error.</p>
+      <p>Lets see what happens when we get rid of the semicolon on Line 5 of "Hello, World!"</p>
+      <div class="code">
+  <pre>#include &lt;iostream&gt;
+
+int main() {
+   std::cout << "Hello world!"
+   return 0;
+}</pre>
+</div>
+      <p>Your IDE (Integrated Development Environment) like Visual Studio Code will output an error:</p>
+      <div class="code">
+  <pre>c:\vcprojects\hello.cpp(6): error C2143: 
+      syntax error : missing ';' before 'return'</pre>
+</div>
+      <p>The compiler reports an error on line 6, indicating a missing semicolon before the return statement. 
+          This error might stem from line 5, where a semicolon is conventionally expected.</p>
+      <p>Syntax errors are common when writing a program; fortunately, they're typically straightforward to fix, as the 
+          compiler will tell you where the problem is. A program will never compile if a syntax error is present.</p>
+      <h1 class="chapter">Chapter 1.2: Comments</h1>
+      <h1>Single-Line Comments</h1>
+      <p>The <span class="highlightbox"><b>//</b></span> symbol begins a C++ single-line comment, which pretty much 
+          tells the compiler to ignore everything 
+          from the beginning of <span class="highlightbox"><b>//</b></span> to the end of the line.</p>
+      <p>Typically, a single-line comment is used to quickly explain a line of code.</p>
+      <p>Having comments to the right of the line can make the both the code and the line hard to read, 
+          especially if the line is long. if the lines are short the comments can be alligned.</p>
+      <h1>Multi-Line Comments</h1>
+      <p>The /* and */ pair of symbols denotes a C-style multi-line comment. Everything in between the symbols is ignored.</p>
+      <div class="code"><pre>/* This is a multi-line comment.
+   This line will be ignored.
+   So will this one. */</pre></div>
+      <p>Since everything between the comments is ignored, some programmers beautify their comments.</p>
+      <div class="code"><pre>/* This is a multi-line comment.
+ * the matching asterisks to the left
+ * can make this easier to read
+ */</pre></div>
+      <p>Multi-line comments cannot be nested. The following would have these results:</p>
+      <div class="code"><pre>/* This is a multi-line 
+/* comment */ this is not inside the comment */
+// The above comment ends at the first */, not the second */</pre></div>
+      <p>When the compiler tries to compile this, it will ignore everything 
+          from the <span class="highlightbox"><b>first /* to the first */</b></span>. Since this is not inside 
+          the comment, <span class="highlightbox"><b>*/</b></span> is not considered 
+          part of the comment, so the compiler will try to compile it and will fail.</p>
+      
+</body>
+</html>
