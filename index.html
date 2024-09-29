@@ -122,11 +122,24 @@ int main() {
           These are helpful for explaining longer sections of code.</p>
       <p>Example:</p>
       <div class="code">
-  <pre>/*
-This is a multi-line comment.
-It can take up as many lines as needed.
-*/</pre>
+  <pre>/* This is a multi-line comment.
+   This line will be ignored.
+   So will this one. */</pre>
 </div>
-
+       <p>Since everything is between the symbols is ignored, you will sometimes see
+       programmers make the code more nice looking</p>
+       <div class="code"><pre>/* This is a multi-line comment.
+ * the matching asterisks to the left
+ * can make this easier to read
+ */</pre></div>
+       <p>Multi-line comments cannot be nested, as it would cause a compile error</p>
+       <div class="code"><pre/* This is a multi-line /* comment */ 
+this is not inside the comment */
+// The above comment ends at the first */, not the second */pre></div>
+       <p>When the compiler tries to compile this, it will ignore everything from the first 
+           <span class="highlightbox"><b>/* to the first /*</b></span>. Since this is <span class="highlightbox"><b>not inside the comment */</b></span> is not
+       considered part of the comment, the compiler will try and result in a compile error.</p>
+       <p>This one place where using a syntax highlighter can be useful, as the different color for the comment should
+       make clear whats considered part of the comment and which one is not.</p>
 </body>
 </html>
