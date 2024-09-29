@@ -121,3 +121,15 @@ hr {
 .index {
   color: white;
 }
+
+.advancedReaders {
+    border: 2px solid white;
+    background-color: #333;
+    color: white;
+    padding: auto;
+    margin: 20px 0;
+    color: white;
+    max-width: auto;
+    display: inline-block;
+    overflow: auto;
+  }
