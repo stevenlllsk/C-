@@ -18,38 +18,51 @@ body {
   
   .highlightbox {
     display: inline-block;
-    padding: 5px;
+    padding: 2px;
     border: 2px solid white;
     background-color: #333;
     color: white;
-    border-radius: 5px;
+    border-radius: 2px;
+    max-width: auto;
+    display: inline-block;
   }
   
   .nomenclature {
     border: 2px solid white;
     background-color: #333;
     color: white;
-    padding: 15px;
+    padding: auto;
     margin: 20px 0;
     color: white;
+    max-width: auto;
+    display: inline-block;
+    overflow: auto;
   }
   
   .code {
     border: 2px solid white;
     background-color: #333;
     color: white;
-    padding: 15px;
-    margin: 20px 0;
+    padding: auto;
+    text-align: left;
+    margin: 10px 0;
     white-space: pre;
+    overflow: auto;
+    overflow-y: auto;
+    max-width: auto; 
+    display: inline-block;
   }
   
   .rule-box {
     border: 2px solid white;
     background-color: #333;
     color: white;
-    padding: 15px;
+    padding: auto;
     margin: 20px 0;
     color: red;
+    max-width: auto;
+    display: inline-block;
+    overflow: auto;
   }
   
   .rule-box p {
@@ -64,9 +77,12 @@ body {
     border: 2px solid white;
     background-color: #333;
     color: white;
-    padding: 15px;
+    padding: auto;
     margin: 20px 0;
     color: red;
+    max-width: auto;
+    display: inline-block;
+    overflow: auto;
   }
   
   .warning p {
@@ -81,7 +97,7 @@ body {
     border: 2px solid white;
     background-color: #333;
     color: white;
-    padding: 15px;
+    padding: auto;
     margin: 20px 0;
     color: green;
   }
