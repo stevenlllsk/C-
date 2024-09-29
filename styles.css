@@ -51,15 +51,17 @@ hr {
     border: 2px solid white;
     background-color: #333;
     color: white;
-    padding: auto;
+    padding: 10px; /* Use a specific padding */
     text-align: left;
     margin: 10px 0;
     white-space: pre;
-    overflow: auto;
-    overflow-y: auto;
-    max-width: auto; 
-    display: inline-block;
-  }
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    width: 100%; /* Full width */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Include padding and border in width calculations */
+    display: block; /* Ensure it occupies full width */
+}
+
   
   .rule-box {
     border: 2px solid white;
