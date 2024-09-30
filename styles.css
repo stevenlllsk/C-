@@ -135,3 +135,11 @@ hr {
     display: inline-block;
     overflow: auto;
   }
+
+section {
+  height: 1px;
+  background-color: white;
+  border-color: white;
+  padding: 1px;
+  margin: 10px 0;
+}
