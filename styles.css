@@ -22,6 +22,11 @@ hr {
   background-color: white;
   border-color: white;
 }
+
+li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
   
 
   .highlightbox {
