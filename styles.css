@@ -70,7 +70,7 @@ li {
   
   .rule-box {
     border: 2px solid white;
-    background-color: #333;
+    background-color: lightpink;
     color: white;
     padding: auto;
     margin: 20px 0;
@@ -90,7 +90,7 @@ li {
   
   .warning {
     border: 2px solid white;
-    background-color: #333;
+    background-color: lightpink;
     color: white;
     padding: auto;
     margin: 20px 0;
@@ -110,11 +110,11 @@ li {
 
   .best-practice {
     border: 2px solid white;
-    background-color: #333;
+    background-color: palegreen;
     color: white;
     padding: auto;
     margin: 20px 0;
-    color: green;
+    color: darkgreen;
   }
 
   .best-practice p {
@@ -131,7 +131,7 @@ li {
 
 .advancedReaders {
     border: 2px solid white;
-    background-color: #333;
+    background-color: cornflowerblue;
     color: white;
     padding: auto;
     margin: 20px 0;
@@ -147,4 +147,16 @@ section {
   border-color: white;
   padding: 1px;
   margin: 10px 0;
+}
+
+.tip {
+  border: 2px solid white;
+    background-color: cornflowerblue;
+    color: white;
+    padding: auto;
+    margin: 20px 0;
+    color: white;
+    max-width: auto;
+    display: inline-block;
+    overflow: auto;
 }
