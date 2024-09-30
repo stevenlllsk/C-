@@ -600,7 +600,7 @@ int main()
                 <h1>The input/output library</h1>
                 <p>
                     The input/output library (io library) is part of the C++ standard library, that deals with basic
-                    input/output. Wel will use the functions in the library to get input from the keyboard and output data to the 
+                    input/output. We will use the functions in the library to get input from the keyboard and output data to the 
                     console. The <i>io</i> part of <i>iostream</i> stand for <i>input/output.</i>
                 </p>
 
@@ -768,9 +768,33 @@ My name is Alex.</code></pre>
                             Output a newline whenever a line of output is complete.
                         </p>
                     </div>
-
-
-
+                    
+                <h1><span class = "highlightbox"><b>std::cout</b></span> is buffered</h1>
+                <p>
+                    In C++, output to <span class = "highlightbox"><b>std::cout</b></span> is similar to passengers waiting for a rollercoaster. When a statement requests 
+                    output, it's not immediately sent to the console. Instead, the output is stored in a buffer, like passengers lining up for a ride. 
+                </p>
+                <p>
+                    Periodically, when the buffer is full or certain events occur (like reaching a newline or using <span class = "highlightbox"><b>std::endl</b></span>), the buffer 
+                    is flushed, sending the collected output to the console. If the buffer isn't flushed, any pending output remains waiting until it's eventually processed. 
+                    This buffering improves efficiency by grouping output together before sending it.
+                </p>
+                <p>
+                    This also means if your program crashes, aborts, or pauses (e.g. for debugging) before the buffer is flushed, 
+                    any output waiting in the buffer will not display.
+                </p>
+                    
+                    <!-- Add key insight here-->
+                    
+                <h1><span class = "highlightbox"><b>std::cout</b></span> vs <span class = "highlightbox"><b>\n</b></span></h1>
+                <p>
+                    Using <span class = "highlightbox"><b>std::endl</b></span> is inefficient because it performs two actions: it outputs a newline and flushes the buffer, which slows down performance. 
+                    Multiple uses of <span class = "highlightbox"><b>std::endl</b></span> cause unnecessary flushes. 
+                </p>
+                <p>
+                    Typically, C++ handles flushing the buffer automatically, so manual flushing isn't needed. To insert a newline without flushing, use <span class = "highlightbox"><b>\n</b></span>, 
+                    which moves the cursor to the next line without slowing down performance and is more concise to type.
+                </p>
 
 </body>
 </html
