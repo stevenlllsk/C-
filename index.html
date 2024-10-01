@@ -664,7 +664,7 @@ int main()
 
                 <p>
                     To print more than one thing on the same line, the insertion operator 
-                    (<<) can be used multiple times in a single statement to concatenate (link together) 
+                    (<span class = "highlightbox"><b><<</b></span>) can be used multiple times in a single statement to concatenate (link together) 
                     multiple pieces of output. For example:
                 </p>
 
@@ -722,17 +722,15 @@ int main()
                 <pre class = "code"><code class = "cpp">Hi!My name is Alex.</code></pre>
 
                 <p>
-                    Seperate output statements dont result in seperate lines of output on the console.
-                    To print separate lines of output in the console, we use a newline character, which 
-                    is a specific character or sequence that moves the cursor to the beginning of the next line. 
-                    This behavior can vary depending on the operating system.
+                    Separate output statements do not create new lines in the console. To print on separate lines, a newline 
+                    character is used to move the cursor to the next line. This behavior may vary by operating system.
                 </p>
 
                 <p>
                     One way to output a newline is to output std::endl (which stands for “end line”):
                 </p>
 
-                <pre class = "code"><code class = "cpp">#include <iostream> // for std::cout and std::endl
+                <pre class = "code"><code class = "cpp">#include &lt;iostream&gt; // for std::cout and std::endl
 
 int main()
 {
@@ -775,16 +773,13 @@ My name is Alex.</code></pre>
                     output, it's not immediately sent to the console. Instead, the output is stored in a buffer, like passengers lining up for a ride. 
                 </p>
                 <p>
-                    Periodically, when the buffer is full or certain events occur (like reaching a newline or using <span class = "highlightbox"><b>std::endl</b></span>), the buffer 
-                    is flushed, sending the collected output to the console. If the buffer isn't flushed, any pending output remains waiting until it's eventually processed. 
-                    This buffering improves efficiency by grouping output together before sending it.
+                    The buffer flushes when full or upon certain events, like newlines or <span class="highlightbox"><b>std::endl</b></span>, which sends the output to the 
+                    console. If not flushed, pending output remains unprocessed. This buffering improves efficiency by consolidating output before sending.
                 </p>
                 <p>
                     This also means if your program crashes, aborts, or pauses (e.g. for debugging) before the buffer is flushed, 
                     any output waiting in the buffer will not display.
                 </p>
-                    
-                    <!-- Add key insight here-->
                     
                 <h1><span class = "highlightbox"><b>std::cout</b></span> vs <span class = "highlightbox"><b>\n</b></span></h1>
                 <p>
@@ -795,6 +790,156 @@ My name is Alex.</code></pre>
                     Typically, C++ handles flushing the buffer automatically, so manual flushing isn't needed. To insert a newline without flushing, use <span class = "highlightbox"><b>\n</b></span>, 
                     which moves the cursor to the next line without slowing down performance and is more concise to type.
                 </p>
+                    
+                <p>Here’s an example that uses <span class = "highlightbox"><b>\n</b></span>\n in a few different ways:</p>
+                    
+                <pre class = "code"><code class = "cpp">#include &lt;iostream&gt; // for std::cout
+
+int main()
+{
+    int x{ 5 };
+    std::cout << "x is equal to: " << x << '\n'; // single quoted (by itself) (conventional)
+    std::cout << "Yep." << "\n";                 // double quoted (by itself) (unconventional but okay)
+    std::cout << "And that's all, folks!\n";     // between double quotes in existing text (conventional)
+    return 0;
+}</pre></code>
+                    
+                <p>
+                    This prints:
+                </p>
+                    
+                    <pre class = "code"><code class = "cpp">x is equal to: 5
+Yep.
+And that's all, folks!</code></pre>
+                    
+                <p>
+                    When <span class = "highlightbox"><b>\n</b></span>is not being embedded into an existing line of double-quoted text (<span class = "highlightbox"><b>e.g "hello\n"</b></span>), 
+                    it is conventionally single quoted (<span class = "highlightbox"><b>'\n'</b></span>).
+                </p>
+                    
+                <div class = "advancedReaders">
+                    <h1>
+                        Advanced Readers
+                    </h1>
+                    <p>
+                        In C++, we use single quotes to represent single characters like <span class = "highlightbox"><b>'a'</b></span> 
+                        or <span class = "highlightbox"><b>'$'</b></span>, and double quotes for text like <span class = "highlightbox"><b>"Hello, World!"</b></span>
+                    </p>
+                </div>
+                    
+                <div class = "best-practice">
+                    <h1>
+                        Best Practice
+                    </h1>
+                    <p>
+                        Prefer <span class = "highlightbox"><b>\n</b></span> over <span class = "highlightbox"><b>std::endl</b></span> when outputting text to the console.
+                    </p>
+                </div>
+                    
+                <div class = "warning">
+                    <h1>
+                        Warning
+                    </h1>
+                    <p>
+                        The character <span class = "highlightbox"><b>'\n'</b></span> uses a backslash in C++. Using a forward slash or adding extra characters results in 
+                        unexpected behavior, like <span class = "highlightbox"><b>std::cout << '/n';</b></span> printing <span class = "highlightbox"><b>12142</b></span>.
+                    </p>
+                </div>
+                    <h1>
+                        std::cin
+                    </h1>
+                    
+                    <p>
+                        <span class = "highlightbox"><b>std::cin</b></span> is a predefined variable in the iostream library used for reading input from the 
+                        keyboard, similar to how <span class = "highlightbox"><b>std::cout</b></span> is used to print data. It uses the extraction operator 
+                        <span class = "highlightbox"><b>>></b></span> to store input in a variable for later use.
+                    </p>
+                        
+                    <pre class = "code"><code class = "cpp">#include &lt;iostream&gt;  // for std::cout and std::cin
+
+int main()
+{
+    std::cout << "Enter a number: "; // ask user for a number
+
+    int x{};       // define variable x to hold user input (and value-initialize it)
+    std::cin >> x; // get number from keyboard and store it in variable x
+
+    std::cout << "You entered " << x << '\n';
+    return 0;
+}</code></pre>
+                    
+                    <p>
+                        When you run the program, it prompts you to enter a number. After you input a number and press enter, the number is assigned 
+                        to a variable. Then, the program prints a message showing the number you entered.
+                    </p>
+                        
+                    <p>
+                        For example (entering the value 4 as input):
+                    </p>
+                        
+                    <pre class = "code"><code class = "cpp">Enter a number: 4
+You entered 4</code></pre>
+                        
+                    <p>
+                        This is an easy way to get keyboard input from the user, and we 
+                        will use it in many of our examples going forward.
+                    </p>
+                        
+                    <div class = "tip">
+                        <h1>
+                            Tip
+                        </h1>
+                        <p>
+                            The user doesn't need to explicitly add <span class = "highlightbox"><b>'\n'</b></span> when accepting input
+                            since pressing the enter key will automatically move the cursor to the next line.
+                        </p>
+                    </div>
+                        
+                    <p>
+                        Just like how we can output more than one bit of text on a 
+                        line, we can also do that with values
+                    </p>
+                        
+                    <pre class = "code"><code class = "cpp">#include <iostream>  // for std::cout and std::cin
+
+int main()
+{
+    std::cout << "Enter two numbers separated by a space: ";
+
+    int x{}; // define variable x to hold user input (and value-initialize it)
+    int y{}; // define variable y to hold user input (and value-initialize it)
+    std::cin >> x >> y; // get two numbers and store in variable x and y respectively
+
+    std::cout << "You entered " << x << " and " << y << '\n';
+
+    return 0;
+}</code></pre>
+                        
+                    <p>
+                        This produces the output:
+                    </p>
+                        
+                    <pre class = "code"><code class = "cpp">Enter two numbers separated by a space: 5 6
+You entered 5 and 6</code></pre>
+                        
+                    <p>
+                        Values entered should be separated by whitespace (spaces, tabs, or newlines).
+                    </p>
+                        
+                    <div class = "advancedReaders">
+                        <h1>
+                            Advanced Readers
+                        </h1>
+                        <p>
+                            The C++ I/O library doesn't allow accepting input without pressing enter. 
+                            For this functionality, use third-party libraries like pdcurses, FXTUI, or notcurses. 
+                            Many GUI libraries also provide similar features.
+                        </p>
+                    </div>
+                        
+                    <h1>
+                        <span class = "highlightbox"><b>std::cin</b></span> is buffered.
+                    </h1>
 
 </body>
 </html
