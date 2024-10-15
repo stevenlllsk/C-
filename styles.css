@@ -1,170 +1,175 @@
 body {
-    background-color: black;
-  }
-  
-  h1 {
-    color: white;
-    margin-right: 25%;
-  }
-  
-  p {
-    color: white;
-  }
-  
-  .chapter {
-    text-align: center;
-    margin: 0;
-    padding: 10px;
-  }
-
-#hello {
-    padding-left:20px;
+  background-color: black;
 }
 
-subchapter {
-    
+a, a:visited {
+  color:white;
 }
 
-hr {
-  height: 5px;
-  background-color: white;
-  border-color: white;
+a:hover {
+  color:orangered;
 }
 
-li {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-  
-
-  .highlightbox {
-    display: inline-block;
-    padding: 2px;
-    border: 2px solid white;
-    background-color: #333;
-    color: white;
-    border-radius: 2px;
-    max-width: auto;
-    display: inline-block;
-  }
-  
-  .nomenclature {
-    border: 2px solid white;
-    background-color: #333;
-    color: white;
-    padding: auto;
-    margin: 20px 0;
-    color: white;
-    max-width: auto;
-    display: inline-block;
-    overflow: auto;
-  }
-  
-  .code {
-    border: 2px solid white;
-    background-color: #333;
-    color: white;
-    padding: auto;
-    text-align: left;
-    margin: 10px 0;
-    white-space: pre;
-    overflow-x: auto;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box; 
-    display: block; 
+h1 {
+  color: white;
+  margin-right: 25%;
 }
 
-  
-  .rule-box {
-    border: 2px solid white;
-    background-color: lightpink;
-    color: white;
-    padding: auto;
-    margin: 20px 0;
-    color: red;
-    max-width: auto;
-    display: inline-block;
-    overflow: auto;
-  }
-  
-  .rule-box p {
-    color: red;
-  }
-  
-  .rule-box h1 {
-    color: red;
-  }
-  
-  .warning {
-    border: 2px solid white;
-    background-color: lightpink;
-    color: white;
-    padding: auto;
-    margin: 20px 0;
-    color: red;
-    max-width: auto;
-    display: inline-block;
-    overflow: auto;
-  }
-  
-  .warning p {
-    color: red;
-  }
-  
-  .warning h1 {
-    color: red;
-  }
-
-  .best-practice {
-    border: 2px solid white;
-    background-color: palegreen;
-    color: white;
-    padding: auto;
-    margin: 20px 0;
-    color: darkgreen;
-  }
-
-  .best-practice p {
-    color: green;
-  }
-  
-  .best-practice h1 {
-    color: green;
-  }
-
-.index {
+p {
   color: white;
 }
 
+.chapter {
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+#hello {
+  padding-left:20px;
+}
+
+
+hr {
+height: 5px;
+background-color: white;
+border-color: white;
+}
+
+li {
+margin-bottom: 10px;
+font-size: 18px;
+}
+
+
+.highlightbox {
+  display: inline-block;
+  padding: 2px;
+  border: 2px solid white;
+  background-color: #333;
+  color: white;
+  border-radius: 2px;
+  max-width: auto;
+  display: inline-block;
+}
+
+.nomenclature {
+  border: 2px solid white;
+  background-color: #333;
+  color: white;
+  padding: auto;
+  margin: 20px 0;
+  color: white;
+  max-width: auto;
+  display: inline-block;
+  overflow: auto;
+}
+
+.code {
+  border: 2px solid white;
+  background-color: #333;
+  color: white;
+  padding: auto;
+  text-align: left;
+  margin: 10px 0;
+  white-space: pre;
+  overflow-x: auto;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: block;
+}
+
+
+.rule-box {
+  border: 2px solid white;
+  background-color: lightpink;
+  color: white;
+  padding: auto;
+  margin: 20px 0;
+  color: red;
+  max-width: auto;
+  display: inline-block;
+  overflow: auto;
+}
+
+.rule-box p {
+  color: red;
+}
+
+.rule-box h1 {
+  color: red;
+}
+
+.warning {
+  border: 2px solid white;
+  background-color: lightpink;
+  color: white;
+  padding: auto;
+  margin: 20px 0;
+  color: red;
+  max-width: auto;
+  display: inline-block;
+  overflow: auto;
+}
+
+.warning p {
+  color: red;
+}
+
+.warning h1 {
+  color: red;
+}
+
+.best-practice {
+  border: 2px solid white;
+  background-color: palegreen;
+  color: white;
+  padding: auto;
+  margin: 20px 0;
+  color: darkgreen;
+}
+
+.best-practice p {
+  color: green;
+}
+
+.best-practice h1 {
+  color: green;
+}
+
+.index {
+color: white;
+}
+
 .advancedReaders {
-    border: 2px solid white;
-    background-color: cornflowerblue;
-    color: white;
-    padding: auto;
-    margin: 20px 0;
-    color: white;
-    max-width: auto;
-    display: inline-block;
-    overflow: auto;
-  }
+  border: 2px solid white;
+  background-color: cornflowerblue;
+  color: white;
+  padding: auto;
+  margin: 20px 0;
+  color: white;
+  max-width: auto;
+  display: inline-block;
+  overflow: auto;
+}
 
 section {
-  height: 1px;
-  background-color: white;
-  border-color: white;
-  padding: 1px;
-  margin: 10px 0;
+height: 1px;
+background-color: white;
+border-color: white;
+padding: 1px;
+margin: 10px 0;
 }
 
 .tip {
-  border: 2px solid white;
-    background-color: cornflowerblue;
-    color: white;
-    padding: auto;
-    margin: 20px 0;
-    color: white;
-    max-width: auto;
-    display: inline-block;
-    overflow: auto;
+border: 2px solid white;
+  background-color: cornflowerblue;
+  color: white;
+  padding: auto;
+  margin: 20px 0;
+  color: white;
+  max-width: auto;
+  display: inline-block;
+  overflow: auto;
 }
