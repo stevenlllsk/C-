@@ -15,26 +15,26 @@
         <h2 class="index">Index</h2>
         <ul>
             <li><a href="#chapter1-1">Chapter 1.1: Statements and structure of a program</a></li>
-            <li><a id="hello" href="#subchapter">Hello World: </a></li>            
+            <li><a id="hello" href="#subchapter">Hello World: </a></li>
             <li><a href="#chapter1-2">Chapter 1.2: Comments</a></li>
             <li><a href="#chapter1-3">Chapter 1.3: Introduction to Objects and Variables</a></li>
             <li><a href="#chapter1-4">Chapter 1.4: Variable assignment and initialization</a></li>
             <li><a href="#chapter1-5">Chapter 1.5: Introduction to iostream: cout, cin, and endl</a></li>
         </ul>
     </nav>
-    
+
     <hr>
         <h1 id="chapter1-1" class="chapter">Chapter 1.1: Statements and structure of a program</h1>
     <hr>
-    
+
     <h1>Statements:</h1>
     <p>A computer program is a sequence of instructions that tells the computer what to do.
-        A statement is a type of instruction that tells the program to perform some action. 
-        Statements are the most common type of instruction in a C++ program because they are the smallest 
-        independent unit of computation in C++, so they function like sentences in natural language.    
-    <p>When we talk or convey an idea 
-        to another person, we typically speak or write in sentences, so in C++, we write in 
-        statements instead. Almost all (not always) statements will 
+        A statement is a type of instruction that tells the program to perform some action.
+        Statements are the most common type of instruction in a C++ program because they are the smallest
+        independent unit of computation in C++, so they function like sentences in natural language.
+    <p>When we talk or convey an idea
+        to another person, we typically speak or write in sentences, so in C++, we write in
+        statements instead. Almost all (not always) statements will
         end in a semicolon. In C++, a single statement could compile into many Machine Language Instructions</p>
     <h1>The different types of statements:</h1>
     <p>• Declaration statements</p>
@@ -45,60 +45,60 @@
     <p>• Iteration statements (loops)</p>
     <p>• Try blocks</p>
     <h1>Functions and Main Functions:</h1>
-    
-    <p>In C++, statements are grouped into units called functions. 
-        A function is a collection of statements executed 
-        sequentially (in order). When you learn more, you will be able 
+
+    <p>In C++, statements are grouped into units called functions.
+        A function is a collection of statements executed
+        sequentially (in order). When you learn more, you will be able
         to create some pretty awesome functions.</p>
     <div class="rule-box">
         <h1>Rule</h1>
-        <p>Every function must have a special function named main (all lowercase). 
-            When the program is compiled and run, the statements inside main are run 
+        <p>Every function must have a special function named main (all lowercase).
+            When the program is compiled and run, the statements inside main are run
             in sequential order.</p>
     </div>
-    <p>Programs usually terminate after running after the last statement inside 
-        the function main has been executed. (Though due to bugs or mistakes, the code may terminate 
+    <p>Programs usually terminate after running after the last statement inside
+        the function main has been executed. (Though due to bugs or mistakes, the code may terminate
         early, so make sure not to mess up.)</p>
-    <p>Functions are typically written to do a specific job or perform some useful action. 
-        A function named <span class="highlightbox"><b>max</b></span> might have a statement that 
+    <p>Functions are typically written to do a specific job or perform some useful action.
+        A function named <span class="highlightbox"><b>max</b></span> might have a statement that
         figures out which number is larger.</p>
-    <p>A function called <span class="highlightbox"><b>calculateGrade</b></span> may calculate a student's grade from tests, quizzes, or homework. 
-        A function named <span class="highlightbox"><b>printEmployee</b></span> might print stored information on an employee to the console. Remember, functions 
+    <p>A function called <span class="highlightbox"><b>calculateGrade</b></span> may calculate a student's grade from tests, quizzes, or homework.
+        A function named <span class="highlightbox"><b>printEmployee</b></span> might print stored information on an employee to the console. Remember, functions
         are used as a common organizational tool.</p>
-    <div class="nomenclature"><h1>Nomenclature</h1><p>When discussing functions, it's fairly common shorthand to append a pair of parentheses to the end of 
-        a function's name. For example, if you see <span class="highlightbox"><b>main()</b></span> or <span class="highlightbox"><b>doSomething()</b></span> , these are shorthand 
-        functions named <span class="highlightbox"><b>main</b></span> 
+    <div class="nomenclature"><h1>Nomenclature</h1><p>When discussing functions, it's fairly common shorthand to append a pair of parentheses to the end of
+        a function's name. For example, if you see <span class="highlightbox"><b>main()</b></span> or <span class="highlightbox"><b>doSomething()</b></span> , these are shorthand
+        functions named <span class="highlightbox"><b>main</b></span>
         or <span class="highlightbox"><b>doSomething</b></span>.</p></div>
-        <h1 id="subchapter" class="subchapter">Hello World:</h1>
-    <p>Now that you have a decent, brief understanding of what statements and functions are in C++, 
+        <h1 id="subchapter">Hello World:</h1>
+    <p>Now that you have a decent, brief understanding of what statements and functions are in C++,
         let's go to the Hello, World! program and take a high-level look at what it does.</p>
         <pre class="code"><code class="cpp">
 #include &lt;iostream&gt;
-        
+
 int main() {
     std::cout &lt;&lt; "Hello world!";
     return 0;
 }</code></pre>
-        
-      <p>Line 1 is a special line called a preprocessor directive. This <span class="highlightbox"><b>#include</b></span> preprocessor directive indicates that we should use the contents 
+
+      <p>Line 1 is a special line called a preprocessor directive. This <span class="highlightbox"><b>#include</b></span> preprocessor directive indicates that we should use the contents
           of the <span class="highlightbox"><b>iostream</b></span> library, which is part of the C++ standard library. <span class="highlightbox"><b>Iostream</b></span> allows us to read/write text to/from the console.</p>
 
-      <p>We need this line in order to use <span class="highlightbox"><b>std::cout</b></span> on line 5. Excluding this would cause a compilation error on line 5, as the compiler 
+      <p>We need this line in order to use <span class="highlightbox"><b>std::cout</b></span> on line 5. Excluding this would cause a compilation error on line 5, as the compiler
           would not know what <span class="highlightbox"><b>std::cout</b></span> is because <span class="highlightbox"><b>iostream</b></span> is not included.</p>
       <p>Line 2 is blank and will not be compiled by the compiler, just like comments. The blank space serves to make it more readable for humans.</p>
       <p>Line 3 tells the compiler that we are going to write (define) whos name (identifier) and this function will produce an int(An Integer)</p>
-      <p>Lines 4-7 tell the compiler which lines are part of the <span class="highlightbox"><b>main</b></span> function. Everything between the opening curly brace on 
+      <p>Lines 4-7 tell the compiler which lines are part of the <span class="highlightbox"><b>main</b></span> function. Everything between the opening curly brace on
           line 4 and the closing curly brace on line 7 is considered part of the <span class="highlightbox"><b>main function</b></span>. This is called the <span class="highlightbox"><b>function body</b></span>.</p>
-      <p>Line 5 is the first statement within the <span class="highlightbox"><b>main function</b></span> and is the first statement that executes when we run the program. 
-          <span class="highlightbox"><b>std::cout</b></span> (stands for <span class="highlightbox"><b>character output</b></span>) 
+      <p>Line 5 is the first statement within the <span class="highlightbox"><b>main function</b></span> and is the first statement that executes when we run the program.
+          <span class="highlightbox"><b>std::cout</b></span> (stands for <span class="highlightbox"><b>character output</b></span>)
           and the <span class="highlightbox"><b><< operator</b></span> displays information in the console.</p>
-      <p>Line 6 is a <span class="highlightbox"><b>return statement</b></span> that sends 0 to the Operating System (OS), signaling successful execution of the program. It’s the last 
+      <p>Line 6 is a <span class="highlightbox"><b>return statement</b></span> that sends 0 to the Operating System (OS), signaling successful execution of the program. It’s the last
           statement to run, completing the program.</p>
       <p>When you compile and run you will see <span class="highlightbox"><b>Hello, World!</b></span>in the console.</p>
       <h1 id="syntax-errors">Syntax and Syntax Errors:</h1>
-      <p>In English, sentences are constructed according to grammatical rules that you learned in school. For example, normal sentences end with a period. 
+      <p>In English, sentences are constructed according to grammatical rules that you learned in school. For example, normal sentences end with a period.
           That is syntax. If there is no period, then that is a syntax error.</p>
-      <p>C++ has syntax too, rules about how your program must be constructed in order to be considered valid by the compiler. The compiler is responsible 
+      <p>C++ has syntax too, rules about how your program must be constructed in order to be considered valid by the compiler. The compiler is responsible
           for making sure you follow the syntax of C++. If you have syntax errors, then the compiler will flag the line as a syntax error.</p>
       <p>Lets see what happens when we get rid of the semicolon on Line 5 of "Hello, World!"</p>
       <pre class="code"><code class="cpp">#include &lt;iostream&gt;
@@ -110,27 +110,27 @@ int main() {
 
       <p>Your IDE (Integrated Development Environment) like Visual Studio Code will output an error:</p>
 
-      <pre class="code"><code class="cpp">c:\vcprojects\hello.cpp(6): error C2143: 
+      <pre class="code"><code class="cpp">c:\vcprojects\hello.cpp(6): error C2143:
         syntax error : missing ';' before 'return'</code></pre>
 
-      <p>The compiler reports an error on line 6, indicating a missing semicolon before the return statement. 
+      <p>The compiler reports an error on line 6, indicating a missing semicolon before the return statement.
           This error might stem from line 5, where a semicolon is conventionally expected.</p>
-      <p>Syntax errors are common when writing a program; fortunately, they're typically straightforward to fix, as the 
+      <p>Syntax errors are common when writing a program; fortunately, they're typically straightforward to fix, as the
           compiler will tell you where the problem is. A program will never compile if a syntax error is present.</p>
 
       <hr>
         <h1 id="chapter1-2" class="chapter">Chapter 1.2: Comments</h1>
       <hr>
-      
+
       <h1>Single-Line Comments</h1>
-      <p>The <span class="highlightbox"><b>//</b></span> symbol begins a C++ single-line comment, which pretty much 
-          tells the compiler to ignore everything 
+      <p>The <span class="highlightbox"><b>//</b></span> symbol begins a C++ single-line comment, which pretty much
+          tells the compiler to ignore everything
           from the beginning of <span class="highlightbox"><b>//</b></span> to the end of the line.</p>
-      <p>Typically, a single-line comment appears at the top of the file with your name, the date, and other personal information. 
+      <p>Typically, a single-line comment appears at the top of the file with your name, the date, and other personal information.
           They are also used to describe the logic of a statement or an expression.</p>
 
       <h1>Multi-line Comments</h1>
-      <p>Multi-line comments span multiple lines, starting with <span class="highlightbox"><b>/*</b></span> and ending with <span class="highlightbox"><b>*/</b></span>. 
+      <p>Multi-line comments span multiple lines, starting with <span class="highlightbox"><b>/*</b></span> and ending with <span class="highlightbox"><b>*/</b></span>.
           These are helpful for explaining longer sections of code.</p>
       <p>Example:</p>
       <pre class="code"><code class="cpp">/* This is a multi-line comment.
@@ -144,10 +144,10 @@ int main() {
  * can make this easier to read
  */</pre></code>
        <p>Multi-line comments cannot be nested, as it would cause a compile error</p>
-       <pre class="code"><code class="cpp">/* This is a multi-line /* comment */ 
+       <pre class="code"><code class="cpp">/* This is a multi-line /* comment */
 this is not inside the comment */
 // The above comment ends at the first */, not the second *</pre></code>
-       <p>When the compiler tries to compile this, it will ignore everything from the first 
+       <p>When the compiler tries to compile this, it will ignore everything from the first
            <span class="highlightbox"><b>/* to the first /*</b></span>. Since this is <span class="highlightbox"><b>not inside the comment */</b></span> is not
        considered part of the comment, the compiler will try and result in a compile error.</p>
        <p>This one place where using a syntax highlighter can be useful, as the different color for the comment should
@@ -168,39 +168,39 @@ this is not inside the comment */
            <hr>
               <h1 id="chapter1-3" class="chapter">Chapter 1.3: Introduction to Objects and Variables</h1>
            <hr>
-           
+
        <p>A program can acquire data to work in many ways: from a file or database, over a network, from the user
         providing input on a keyboard, or from the programmer.
        </p>
-       <p>A single peice of data is called a <span class="highlightbox"><b>value</b></span>. 
-        Common examples of <span class="highlightbox"><b>value</b></span> includes 
-        <span class="highlightbox"><b>letters</b></span>, 
-        <span class="highlightbox"><b>numbers</b></span>, and 
+       <p>A single peice of data is called a <span class="highlightbox"><b>value</b></span>.
+        Common examples of <span class="highlightbox"><b>value</b></span> includes
+        <span class="highlightbox"><b>letters</b></span>,
+        <span class="highlightbox"><b>numbers</b></span>, and
         <span class="highlightbox"><b>text</b></span>.
        </p>
 
        <h1>Random Access Memory</h1>
-       <p>The main memory in a computer is called 
-        <span class="highlightbox"><b>Random Access Memory</b></span>. When we run a program, 
-        the OS loads the program into ram, any data hardcoded will load like 
+       <p>The main memory in a computer is called
+        <span class="highlightbox"><b>Random Access Memory</b></span>. When we run a program,
+        the OS loads the program into ram, any data hardcoded will load like
         <span class="highlightbox"><b>Hello, World!</b></span>
        </p>
-       <p>The operating system reserves extra RAM for storing data during a program's runtime, 
-        such as user input, file data, or calculations. RAM can be seen as numbered boxes holding values. In older languages like 
+       <p>The operating system reserves extra RAM for storing data during a program's runtime,
+        such as user input, file data, or calculations. RAM can be seen as numbered boxes holding values. In older languages like
         Applesoft BASIC, programmers could directly access specific memory locations, while modern languages manage this automatically.</p>
         <h1>Objects and Variables</h1>
-        <p>In C++, direct access memory is discouraged, instead we access memory indirectly through an object. 
-            An <span class="highlightbox"><b>object</b></span> in a region of storage that can store a value, and has associated properties. 
+        <p>In C++, direct access memory is discouraged, instead we access memory indirectly through an object.
+            An <span class="highlightbox"><b>object</b></span> in a region of storage that can store a value, and has associated properties.
         </p>
-        <p>The compiler and operating system handle memory assignment for objects, so instead of specifying exact memory locations, 
-            we can simply refer to objects to store and retrieve values. This allows us to focus on using 
-            objects without worrying about their specific placement in memory. 
+        <p>The compiler and operating system handle memory assignment for objects, so instead of specifying exact memory locations,
+            we can simply refer to objects to store and retrieve values. This allows us to focus on using
+            objects without worrying about their specific placement in memory.
         </p>
-        <p>Although objects in C++ can be unamed, more often we name our objects with a 
+        <p>Although objects in C++ can be unamed, more often we name our objects with a
             <span class="highlightbox"><b>variable</b></span>.
         </p>
         <h1>Variable instantiation</h1>
-        <p>In order to create a variable, we use a special declaration statement called a 
+        <p>In order to create a variable, we use a special declaration statement called a
             <span class="highlightbox"><b>definition</b></span>.
         </p>
         <p>Heres an example of a variable named <span class="highlightbox"><b>x</b></span>:
@@ -212,31 +212,31 @@ this is not inside the comment */
             giving it the name <span class="highlightbox"><b>x</b></span> and specifying it as an <span class="highlightbox"><b>int</b></span>.
             From that point foward the compiler sees the identifer <span class="highlightbox"><b>x</b></span> as a variable.
         </p>
-        <p>At <span class="highlightbox"><b>runtime</b></span>, a variable is <span class="highlightbox"><b>instantiated</b></span>, meaning it is created and assigned a memory address. 
-            For example, if variable x is instantiated at memory location 140, the program will access that location whenever x is used. 
+        <p>At <span class="highlightbox"><b>runtime</b></span>, a variable is <span class="highlightbox"><b>instantiated</b></span>, meaning it is created and assigned a memory address.
+            For example, if variable x is instantiated at memory location 140, the program will access that location whenever x is used.
             An instantiated object is also called an <span class="highlightbox"><b>instance</b></span>.
         </p>
 
         <h1>Data Types</h1>
         <p>
-            So far, we have covered that objects are regions of storage that can store a data value, a 
-            <span class="highlightbox"><b>data type</b></span>, or also called a <span class="highlightbox"><b>type</b></span> 
+            So far, we have covered that objects are regions of storage that can store a data value, a
+            <span class="highlightbox"><b>data type</b></span>, or also called a <span class="highlightbox"><b>type</b></span>
             determines what kind of value the object will store.
         </p>
 
         <p>
-            Integers are just one of many data types that C++ uses out of box, 
+            Integers are just one of many data types that C++ uses out of box,
             here is an example of defining a variable using data type double:
         </p>
 
         <pre class="code"><code class = "cpp">double width; // define a variable named width, of type double</pre></code>
 
         <p>C++ also allows you to create your own custom types.
-            For the beginning, well stick with integer variables because they are simple. 
+            For the beginning, well stick with integer variables because they are simple.
             Soon we will learn <span class="highlightbox"><b>double</b></span>.
         </p>
         <h1>Defining multiple variables</h1>
-        <p>It is possible to define multiple variables of the same type in a single statement by seperating names with a comma, 
+        <p>It is possible to define multiple variables of the same type in a single statement by seperating names with a comma,
             these two snippets will be pretty much the same:
         </p>
 
@@ -246,8 +246,8 @@ int b;</pre></code>
         <p>is the same as:</p>
 
         <pre class="code"><code class = "cpp">int a, b;</pre></code>
-        
-        <p>When defining multiple variables this way, there are two 
+
+        <p>When defining multiple variables this way, there are two
             common mistakes that new programmers tend to make:
         </p>
 
@@ -256,8 +256,8 @@ int b;</pre></code>
         <pre class="code"><code class = "cpp">int a, int b; // wrong (compiler error)
 int a, b; // correct</pre></code>
 
-        <p>The second mistake is to try to define varables 
-            of different types in the same statement, which is not allowed. 
+        <p>The second mistake is to try to define varables
+            of different types in the same statement, which is not allowed.
             Variables of different types must be defined in seperate statements.
         </p>
 
@@ -271,14 +271,14 @@ double b;</pre></code>
 <div class="best-practice">
     <h1>Best practice</h1>
     <p>
-        Although the language allows you to do so, avoid defining multiple 
-        variables of the same type in a single statement. Instead, define each variable in a 
+        Although the language allows you to do so, avoid defining multiple
+        variables of the same type in a single statement. Instead, define each variable in a
         seperate statement on its own line.
     </p>
 </div>
     <h1>Summary</h1>
-    <p>In C++ we use objects to access memory. A named object is called a variable. 
-        Variables have an identifier, a type, and a value. A variables type is used to determine how 
+    <p>In C++ we use objects to access memory. A named object is called a variable.
+        Variables have an identifier, a type, and a value. A variables type is used to determine how
         the value in memory should be interpreted
 </div>
 
@@ -286,18 +286,18 @@ double b;</pre></code>
               <h1 id="chapter1-4" class="chapter">Chapter 1.4:Variable assignment and initialization</h1>
             <hr>
             <h1>Variable assignment</h1>
-            <p>After a variable has been defined, it ca be given a value 
-                using the <span class="highlightbox"><b>=</b></span> operator. This process is called 
-                <span class="highlightbox"><b>assignment</b></span>, and the <span class="highlightbox"><b>=</b></span> operator is called an 
+            <p>After a variable has been defined, it ca be given a value
+                using the <span class="highlightbox"><b>=</b></span> operator. This process is called
+                <span class="highlightbox"><b>assignment</b></span>, and the <span class="highlightbox"><b>=</b></span> operator is called an
                 <span class="highlightbox"><b>assignment operator</b></span>.
             </p>
 
             <pre class="code"><code class = "cpp">int width; // define an integer variable named width
 width = 5; // assignment of value 5 into variable width
-                
+
 // variable width now has value 5</pre></code>
 
-            <p>By default, assignment copies the value on the right-hand side of the <span class="highlightbox"><b>=</b></span> operator, 
+            <p>By default, assignment copies the value on the right-hand side of the <span class="highlightbox"><b>=</b></span> operator,
                 the variable on the left-hand side of the operator. This is called a <span class="highlightbox"><b>copy assignment</b></span>.
             </p>
             <p>Heres an example where we use the assignment twice:</p>
@@ -307,13 +307,13 @@ int main()
 {
     int width;
     width = 5; // copy assignment of value 5 into variable width
-                
+
     std::cout &lt;&lt; width; // prints 5
-                
+
     width = 7; // change value stored in variable width to 7
-                
+
     std::cout &lt;&lt; width; // prints 7
-                
+
     return 0;
 }</pre></code>
 
@@ -321,23 +321,23 @@ int main()
 
             <pre class="code"><code>57</pre></code>
 
-            <p>When we assign value 7 to variable width, the value 5 that 
+            <p>When we assign value 7 to variable width, the value 5 that
                 was there, is overwritten. Normal variables only hold one value at a time.
             </p>
             <div class="warning">
                 <h1>Warning</h1>
                 <p>
-                    One of the most common mistakes that new programmers make is 
-                    to confuse the assignment operator <span class="highlightbox"><b>=</b></span> with 
-                    the equality operator <span class="highlightbox"><b>==</b></span>. Assignment 
-                    <span class="highlightbox"><b>=</b></span> is used to assign a value to a variable. 
+                    One of the most common mistakes that new programmers make is
+                    to confuse the assignment operator <span class="highlightbox"><b>=</b></span> with
+                    the equality operator <span class="highlightbox"><b>==</b></span>. Assignment
+                    <span class="highlightbox"><b>=</b></span> is used to assign a value to a variable.
                     Equality <span class="highlightbox"><b>==</b></span> is used to compare two values.
                 </p>
             </div>
                 <h1>Variable initialization</h1>
                 <p>
-                    Assigning a value to a newly defined object requires two statements: one for definition 
-                    and one for assignment. This can be simplified through initialization, where an initial value is provided 
+                    Assigning a value to a newly defined object requires two statements: one for definition
+                    and one for assignment. This can be simplified through initialization, where an initial value is provided
                     during definition using a syntax called an initializer.
                 </p>
 
@@ -345,11 +345,11 @@ int main()
 
 // variable width now has value 5</pre></code>
 
-                <p>In the above initialization of variable width, { 5 } is the initializer, 
+                <p>In the above initialization of variable width, { 5 } is the initializer,
                     and 5 is the initial value.
                 </p>
                 <h1>Different forms of initialization</h1>
-                <p>Unlike assignment, initialization in C++ is complex and difficult, 
+                <p>Unlike assignment, initialization in C++ is complex and difficult,
                     so we will provide a simplified view to get started
                 </p>
 
@@ -358,56 +358,56 @@ int main()
 // Traditional initialization forms:
 int b = 5;     // copy-initialization (initial value after equals sign)
 int c ( 6 );   // direct-initialization (initial value in parenthesis)
-                    
+
 // Modern initialization forms (preferred):
 int d { 7 };   // direct-list initialization (initial value in braces)
 int f {};      // value-initialization (empty braces)</pre></code>
 
                 <h1>Default-initialization</h1>
                 <p>
-                    When no initializer is provided, the <span class="highlightbox"><b>default-initialization</b></span> is used. In most cases, 
+                    When no initializer is provided, the <span class="highlightbox"><b>default-initialization</b></span> is used. In most cases,
                     default-initialization performs no initialization and leaves the variable a indeterminate value
                 </p>
                 <h1>Copy-initialization</h1>
                 <p>
-                    When an intial value is provided after an equal sign, the 
+                    When an intial value is provided after an equal sign, the
                     <span class="highlightbox"><b>__copy-initialization</b></span>. This form is was from C language.
                 </p>
 
                 <pre class ="code"><code class = "cpp">int width = 5; // copy-initialization of value 5 into variable width</pre></code>
 
-                <p>Much like copy-assignment, copy-initialization copies the value on the right-hand side of the equals into the variable being 
-                    created on the left-hand side. In the above snippet, variable <span class="highlightbox"><b>width</b></span> will be initialized with value 
+                <p>Much like copy-assignment, copy-initialization copies the value on the right-hand side of the equals into the variable being
+                    created on the left-hand side. In the above snippet, variable <span class="highlightbox"><b>width</b></span> will be initialized with value
                     <span class="highlightbox"><b>5</b></span>.
                 </p>
-                <p>Copy-initialization has fallen out of favour in modern C++ due to being slower than other forms of initialization. However, C++17 remedied the 
+                <p>Copy-initialization has fallen out of favour in modern C++ due to being slower than other forms of initialization. However, C++17 remedied the
                     bulk of the issues, and is regaining popularity.
                 </p>
                 <div class="advancedReaders">
                     <h1>Advanced Readers</h1>
                     <p>
-                        Copy-initialization is also used whenever values are implicitly copied, such as when passing arguments to a function by value, returning from a 
+                        Copy-initialization is also used whenever values are implicitly copied, such as when passing arguments to a function by value, returning from a
                         function by value, or catching exceptions by value.
                     </p>
                 </div>
 
                 <h1>Direct-initialization</h1>
                 <p>
-                    When an intial value is provided in parentheses, the 
+                    When an intial value is provided in parentheses, the
                     <span class="highlightbox"><b>direct-initialization</b></span> is used.
                 </p>
 
                 <pre class = "code"><code class = "cpp">int width ( 5 ); // direct-initialization of value 5 into variable width</pre></code>
 
                 <p>
-                    Direct-initialization was initially introduced to allow for more efficient initialization of complex objects. 
-                    Just like copy-initialization, direct-initialization has fallen out of use in modern C++, largely due to being superseded by direct-list-initialization. 
+                    Direct-initialization was initially introduced to allow for more efficient initialization of complex objects.
+                    Just like copy-initialization, direct-initialization has fallen out of use in modern C++, largely due to being superseded by direct-list-initialization.
                     But direct-list-initialization has quirks, and direct-initialization is used in certain cases.
                 </p>
 
                 <h1>Direct-list-initialization and Copy-list-initialization</h1>
                 <p>
-                    The modern way to initialize objects in C++ is using curly braces, called 
+                    The modern way to initialize objects in C++ is using curly braces, called
                     list-initialization (also known as uniform or brace initialization). It comes in two forms.
                 </p>
 
@@ -415,7 +415,7 @@ int f {};      // value-initialization (empty braces)</pre></code>
 int height = { 6 }; // copy-list-initialization of initial value 6 into variable height (rarely used)</pre></code>
 
                 <p>
-                    Before list-initialization, copy-initialization and direct-initialization were used, but both had confusing syntax. List-initialization was introduced to provide a 
+                    Before list-initialization, copy-initialization and direct-initialization were used, but both had confusing syntax. List-initialization was introduced to provide a
                     consistent, clear syntax for initialization, hence the term <span class="highlightbox"><b>"uniform initialization."</b></span>
                 </p>
 
@@ -429,57 +429,57 @@ int height = { 6 }; // copy-list-initialization of initial value 6 into variable
 {
         // An integer can only hold non-fractional values
     int w1 { 4.5 }; // compile error: list init does not allow narrowing conversion of 4.5 to 4
-                    
+
     int w2 = 4.5;   // compiles: copy-init initializes width with 4
     int w3(4.5);    // compiles: direct-init initializes width with 4
-                    
+
     return 0;
 }</pre></code>
                 <p>
-                    On line 4 of the code we're using a value <span class="highlightbox"><b>4.5</b></span> with a fractional component 
-                    <span class="highlightbox"><b>0.5</b></span> to list-initialize a integer variable. Because this is a narrowing 
+                    On line 4 of the code we're using a value <span class="highlightbox"><b>4.5</b></span> with a fractional component
+                    <span class="highlightbox"><b>0.5</b></span> to list-initialize a integer variable. Because this is a narrowing
                     conversion, the compiler is required to generate a diagnostic in such cases.
                 </p>
                 <p>
-                    <span class = "highlightbox"><b>Copy-initialization (line 6)</b></span>  and <span class = "highlightbox"><b>direct-initialization (line 7)</b></span> both silently 
-                    drop the <span class="highlightbox"><b>0.5</b></span> and initialize the variable with <span class="highlightbox"><b>4</b></span>. Your compiler will warn you since 
+                    <span class = "highlightbox"><b>Copy-initialization (line 6)</b></span>  and <span class = "highlightbox"><b>direct-initialization (line 7)</b></span> both silently
+                    drop the <span class="highlightbox"><b>0.5</b></span> and initialize the variable with <span class="highlightbox"><b>4</b></span>. Your compiler will warn you since
                     loosing data is rarely desired. But it may not warn you.
                 </p>
 
                 <p>
-                    Note that this restriction on narrowing conversions only applies to list-initialization, 
+                    Note that this restriction on narrowing conversions only applies to list-initialization,
                     not to any subsequent assignments to the variable:
                 </p>
 
                 <pre class = "code"><code class = "cpp">int main()
 {
     int w1 { 4.5 }; // compile error: list-init does not allow narrowing conversion of 4.5 to 4
-                    
+
     w1 = 4.5;       // okay: copy-assignment allows narrowing conversion of 4.5 to 4
-                    
+
     return 0;
 }</pre></code>
                 <h1>Value-initialization and zero-initialization</h1>
                 <p>
-                    When a variable is <span class="highlightbox"><b>value-initialized</b></span>, it is initialized using empty braces, 
-                    <span class="highlightbox"><b>value-initialized</b></span> takes place. In most cases, <span class="highlightbox"><b>value-initialized</b></span> will 
+                    When a variable is <span class="highlightbox"><b>value-initialized</b></span>, it is initialized using empty braces,
+                    <span class="highlightbox"><b>value-initialized</b></span> takes place. In most cases, <span class="highlightbox"><b>value-initialized</b></span> will
                     initialize the variable to zero (or empty if needed). In such cases where zeroing occurs, this is called <span class="highlightbox"><b>zero-initialized</b></span>
                 </p>
 
                 <pre class = "code"><code class = "cpp">int width {}; // value-initialization / zero-initialization to value 0</pre></code>
                 <h1>Initialize your variables</h1>
-                <p> Initialize your variables upon creation. You may eventually find cases where you want to ignore 
+                <p> Initialize your variables upon creation. You may eventually find cases where you want to ignore
                     this advice for a specific reason, and thats okay as long as the choic is made deliberately.
                 </p>
                 <h1>Initializing multiple variables</h1>
                 <p>
-                    In the last section, we noted that its possible to define multiple variables of the same type 
+                    In the last section, we noted that its possible to define multiple variables of the same type
                     in a single statement by seperating the names with a comma:
                 </p>
 
                 <pre class = "code"><code class = "cpp">int a, b; // create variables a and b, but do not initialize them</pre></code>
                 <p>
-                    We also noted the best practice to avoid this syntax entirely. However, since you may encounter other code that uses this style, its useful 
+                    We also noted the best practice to avoid this syntax entirely. However, since you may encounter other code that uses this style, its useful
                     to talk a little bit more about it, if for no reason than to reinforce some of the reasons you should be avoiding it.
                 </p>
                 <p>
@@ -491,7 +491,7 @@ int c( 7 ), d( 8 );        // direct-initialization
 int e { 9 }, f { 10 };     // direct-list-initialization
 int i {}, j {};            // value-initialization</pre></code>
                 <p>
-                    Unfortuately, theres a common pitfall that can occur when the programmer 
+                    Unfortuately, theres a common pitfall that can occur when the programmer
                     mistakenly initialize both variables by using one initialization statement:
                 </p>
 
@@ -499,7 +499,7 @@ int i {}, j {};            // value-initialization</pre></code>
 int a = 5, b = 5; // correct: a and b are initialized to 5</pre></code>
 
                 <p>
-                    In the top statement, variable <span class = "highlightbox"><b>a</b></span> is left uninitialized, which could 
+                    In the top statement, variable <span class = "highlightbox"><b>a</b></span> is left uninitialized, which could
                     lead to crashes or unpredictable results. To avoid this, remember that each variable should only be initialized by its own initializer.
                 </p>
 
@@ -508,7 +508,7 @@ int a, b = 5;     // wrong: a doesn't have its own initializer</pre></code>
 
                 <h1>Unused initialized variables warnings</h1>
                 <p>
-                    Modern compilers usually warn if a variable is initialized but not used, as this is generally undesirable. With <span class = "highlightbox"><b>"treat warnings as errors"</b></span> 
+                    Modern compilers usually warn if a variable is initialized but not used, as this is generally undesirable. With <span class = "highlightbox"><b>"treat warnings as errors"</b></span>
                     enabled, these warnings become errors, causing compilation to fail. Here's an example program that may seem harmless:
                 </p>
 
@@ -527,7 +527,7 @@ prog.cc:3:9: error: unused variable 'x' [-Werror=unused-variable]</pre></code>
 
                 <p>The program fails to compile due to an unused variable. Here are a few ways to fix it:</p>
                 <p>1. Remove or comment out the definition: If the variable isn’t needed, removing it won’t affect your program.</p>
-                <p>2. Use the variable: If you intend to keep the variable, make sure it's used somewhere in the code, even in a simple 
+                <p>2. Use the variable: If you intend to keep the variable, make sure it's used somewhere in the code, even in a simple
                     operation like printing its value.
                 </p>
 
@@ -536,17 +536,17 @@ prog.cc:3:9: error: unused variable 'x' [-Werror=unused-variable]</pre></code>
 int main()
 {
     int x { 5 };
-                    
+
     std::cout &lt;&lt; x; // variable now used somewhere
-                    
+
     return 0;
 }</pre></code>
-                <p>But this requires some effort to write code that uses it, and has downsides 
+                <p>But this requires some effort to write code that uses it, and has downsides
                     potentially changing your programs behaviour.
                 </p>
 
                 <h1>The <span class = "highlightbox"><b>[[maybe_unused]]</b></span> attribute. <span class = "highlightbox"><b>C++17</b></span></h1>
-                <p>In some cases, neither of the above options are desirable. Consider the case where we have a set 
+                <p>In some cases, neither of the above options are desirable. Consider the case where we have a set
                     of math/physics, values we use in many different.
                 </p>
 
@@ -563,13 +563,13 @@ int main()
     std::cout &lt;&lt; phi &lt;&lt; '\n'; // phi is used
 
     // The compiler will likely complain about gravity being defined but unused
-                    
+
     return 0;
 }</pre></code>
 
                 <p>
-                    In programs with many variables, removing unused ones can be tedious. C++17 introduced the 
-                    <span class = "highlightbox"><b>[[maybe_unused]]</b></span> attribute, which prevents warnings for unused variables. This helps avoid constantly managing them and 
+                    In programs with many variables, removing unused ones can be tedious. C++17 introduced the
+                    <span class = "highlightbox"><b>[[maybe_unused]]</b></span> attribute, which prevents warnings for unused variables. This helps avoid constantly managing them and
                     makes the code easier to maintain without removing and re-adding variables.
                 </p>
 
@@ -585,15 +585,15 @@ int main()
     std::cout &lt;&lt; phi &lt;&lt; '\n';
 
     // The compiler will no longer warn about gravity not being used
-                    
+
     return 0;
 }</pre></code>
 
-                <p>The compiler will likely optimize unused variables with <span class = "highlightbox"><b>[[maybe_unused]]</b></span>, so they won’t impact performance. 
-                    This attribute should be used selectively for variables that have a legitimate reason for being unused, such as when a program needs a list of named 
+                <p>The compiler will likely optimize unused variables with <span class = "highlightbox"><b>[[maybe_unused]]</b></span>, so they won’t impact performance.
+                    This attribute should be used selectively for variables that have a legitimate reason for being unused, such as when a program needs a list of named
                     values, but only some are used depending on the context.
                 </p>
-                
+
                 <hr>
                     <h1 id="chapter1-5" class="chapter">Chapter 1.5: Introduction to iostream: cout, cin, and endl</h1>
                 <hr>
@@ -601,7 +601,7 @@ int main()
                 <h1>The input/output library</h1>
                 <p>
                     The input/output library (io library) is part of the C++ standard library, that deals with basic
-                    input/output. We will use the functions in the library to get input from the keyboard and output data to the 
+                    input/output. We will use the functions in the library to get input from the keyboard and output data to the
                     console. The <i>io</i> part of <i>iostream</i> stand for <i>input/output.</i>
                 </p>
 
@@ -611,7 +611,7 @@ int main()
 </code></pre>
 
                 <p>
-                    The <span class = "highlightbox"><b>iostream</b></span> library includes predefined variables, with std::cout being one of the most useful. It enables sending data 
+                    The <span class = "highlightbox"><b>iostream</b></span> library includes predefined variables, with std::cout being one of the most useful. It enables sending data
                     to the console for printing as text, with "cout" standing for "character output." Here's a reminder of the Hello World program:
                 </p>
 
@@ -622,10 +622,10 @@ int main()
     std::cout &lt;&lt; "Hello world!";
     return 0;
 }</code></pre>
-                  
+
                 <p>
-                    In this program, we include the <span class = "highlightbox"><b>iostream</b></span> library to use <span class = "highlightbox"><b>std::cout</b></span>. 
-                    Within the main function, we utilize std::cout with the insertion operator <span class = "highlightbox"><b>(<<) to print "Hello world!"</b></span> to the console. Additionally, 
+                    In this program, we include the <span class = "highlightbox"><b>iostream</b></span> library to use <span class = "highlightbox"><b>std::cout</b></span>.
+                    Within the main function, we utilize std::cout with the insertion operator <span class = "highlightbox"><b>(<<) to print "Hello world!"</b></span> to the console. Additionally,
                     <span class = "highlightbox"><b>std::cout</b></span> can print both text and numbers.
                 </p>
 
@@ -634,7 +634,7 @@ int main()
 int main()
 {
     std::cout &lt;&lt; 4; // print 4 to console
-                    
+
     return 0;
 }</code></pre>
 
@@ -664,8 +664,8 @@ int main()
                 <pre class="code"><code class="cpp">5</code></pre>
 
                 <p>
-                    To print more than one thing on the same line, the insertion operator 
-                    (<span class = "highlightbox"><b><<</b></span>) can be used multiple times in a single statement to concatenate (link together) 
+                    To print more than one thing on the same line, the insertion operator
+                    (<span class = "highlightbox"><b><<</b></span>) can be used multiple times in a single statement to concatenate (link together)
                     multiple pieces of output. For example:
                 </p>
 
@@ -723,7 +723,7 @@ int main()
                 <pre class = "code"><code class = "cpp">Hi!My name is Alex.</code></pre>
 
                 <p>
-                    Separate output statements do not create new lines in the console. To print on separate lines, a newline 
+                    Separate output statements do not create new lines in the console. To print on separate lines, a newline
                     character is used to move the cursor to the next line. This behavior may vary by operating system.
                 </p>
 
@@ -737,7 +737,7 @@ int main()
 {
     std::cout << "Hi!" << std::endl; // std::endl will cause the cursor to move to the next line
     std::cout << "My name is Alex." << std::endl;
-                    
+
     return 0;
 }</code></pre>
 
@@ -747,18 +747,18 @@ int main()
 
                 <pre class = "code"><code class = "cpp">Hi!
 My name is Alex.</code></pre>
-                    
+
                 <div class = "tip">
                     <h1>
                         Tip
                     </h1>
                     <p>
-                        The second <span class = "highlightbox"><b>std::endl</b></span> isn't strictly necessary since the program ends afterward, 
-                        but it serves useful purposes. It signifies the output as a complete statement, positions the cursor on the next line for potential 
+                        The second <span class = "highlightbox"><b>std::endl</b></span> isn't strictly necessary since the program ends afterward,
+                        but it serves useful purposes. It signifies the output as a complete statement, positions the cursor on the next line for potential
                         future output, and ensures the command prompt appears on a new line after the program finishes on some operating systems.
                     </p>
                 </div>
-                    
+
                     <div class = "best-practice">
                         <h1>
                             Best Practice
@@ -767,33 +767,33 @@ My name is Alex.</code></pre>
                             Output a newline whenever a line of output is complete.
                         </p>
                     </div>
-                    
+
                 <h1><span class = "highlightbox"><b>std::cout</b></span> is buffered</h1>
                 <p>
-                    In C++, output to <span class = "highlightbox"><b>std::cout</b></span> is similar to passengers waiting for a rollercoaster. When a statement requests 
-                    output, it's not immediately sent to the console. Instead, the output is stored in a buffer, like passengers lining up for a ride. 
+                    In C++, output to <span class = "highlightbox"><b>std::cout</b></span> is similar to passengers waiting for a rollercoaster. When a statement requests
+                    output, it's not immediately sent to the console. Instead, the output is stored in a buffer, like passengers lining up for a ride.
                 </p>
                 <p>
-                    The buffer flushes when full or upon certain events, like newlines or <span class="highlightbox"><b>std::endl</b></span>, which sends the output to the 
+                    The buffer flushes when full or upon certain events, like newlines or <span class="highlightbox"><b>std::endl</b></span>, which sends the output to the
                     console. If not flushed, pending output remains unprocessed. This buffering improves efficiency by consolidating output before sending.
                 </p>
                 <p>
-                    This also means if your program crashes, aborts, or pauses (e.g. for debugging) before the buffer is flushed, 
+                    This also means if your program crashes, aborts, or pauses (e.g. for debugging) before the buffer is flushed,
                     any output waiting in the buffer will not display.
                 </p>
-                    
+
                 <h1><span class = "highlightbox"><b>std::cout</b></span> vs <span class = "highlightbox"><b>\n</b></span></h1>
                 <p>
-                    Using <span class = "highlightbox"><b>std::endl</b></span> is inefficient because it performs two actions: it outputs a newline and flushes the buffer, which slows down performance. 
-                    Multiple uses of <span class = "highlightbox"><b>std::endl</b></span> cause unnecessary flushes. 
+                    Using <span class = "highlightbox"><b>std::endl</b></span> is inefficient because it performs two actions: it outputs a newline and flushes the buffer, which slows down performance.
+                    Multiple uses of <span class = "highlightbox"><b>std::endl</b></span> cause unnecessary flushes.
                 </p>
                 <p>
-                    Typically, C++ handles flushing the buffer automatically, so manual flushing isn't needed. To insert a newline without flushing, use <span class = "highlightbox"><b>\n</b></span>, 
+                    Typically, C++ handles flushing the buffer automatically, so manual flushing isn't needed. To insert a newline without flushing, use <span class = "highlightbox"><b>\n</b></span>,
                     which moves the cursor to the next line without slowing down performance and is more concise to type.
                 </p>
-                    
+
                 <p>Here’s an example that uses <span class = "highlightbox"><b>\n</b></span>\n in a few different ways:</p>
-                    
+
                 <pre class = "code"><code class = "cpp">#include &lt;iostream&gt; // for std::cout
 
 int main()
@@ -804,30 +804,30 @@ int main()
     std::cout << "And that's all, folks!\n";     // between double quotes in existing text (conventional)
     return 0;
 }</pre></code>
-                    
+
                 <p>
                     This prints:
                 </p>
-                    
+
                     <pre class = "code"><code class = "cpp">x is equal to: 5
 Yep.
 And that's all, folks!</code></pre>
-                    
+
                 <p>
-                    When <span class = "highlightbox"><b>\n</b></span>is not being embedded into an existing line of double-quoted text (<span class = "highlightbox"><b>e.g "hello\n"</b></span>), 
+                    When <span class = "highlightbox"><b>\n</b></span>is not being embedded into an existing line of double-quoted text (<span class = "highlightbox"><b>e.g "hello\n"</b></span>),
                     it is conventionally single quoted (<span class = "highlightbox"><b>'\n'</b></span>).
                 </p>
-                    
+
                 <div class = "advancedReaders">
                     <h1>
                         Advanced Readers
                     </h1>
                     <p>
-                        In C++, we use single quotes to represent single characters like <span class = "highlightbox"><b>'a'</b></span> 
+                        In C++, we use single quotes to represent single characters like <span class = "highlightbox"><b>'a'</b></span>
                         or <span class = "highlightbox"><b>'$'</b></span>, and double quotes for text like <span class = "highlightbox"><b>"Hello, World!"</b></span>
                     </p>
                 </div>
-                    
+
                 <div class = "best-practice">
                     <h1>
                         Best Practice
@@ -836,26 +836,26 @@ And that's all, folks!</code></pre>
                         Prefer <span class = "highlightbox"><b>\n</b></span> over <span class = "highlightbox"><b>std::endl</b></span> when outputting text to the console.
                     </p>
                 </div>
-                    
+
                 <div class = "warning">
                     <h1>
                         Warning
                     </h1>
                     <p>
-                        The character <span class = "highlightbox"><b>'\n'</b></span> uses a backslash in C++. Using a forward slash or adding extra characters results in 
+                        The character <span class = "highlightbox"><b>'\n'</b></span> uses a backslash in C++. Using a forward slash or adding extra characters results in
                         unexpected behavior, like <span class = "highlightbox"><b>std::cout << '/n';</b></span> printing <span class = "highlightbox"><b>12142</b></span>.
                     </p>
                 </div>
                     <h1>
                         std::cin
                     </h1>
-                    
+
                     <p>
-                        <span class = "highlightbox"><b>std::cin</b></span> is a predefined variable in the iostream library used for reading input from the 
-                        keyboard, similar to how <span class = "highlightbox"><b>std::cout</b></span> is used to print data. It uses the extraction operator 
+                        <span class = "highlightbox"><b>std::cin</b></span> is a predefined variable in the iostream library used for reading input from the
+                        keyboard, similar to how <span class = "highlightbox"><b>std::cout</b></span> is used to print data. It uses the extraction operator
                         <span class = "highlightbox"><b>>></b></span> to store input in a variable for later use.
                     </p>
-                        
+
                     <pre class = "code"><code class = "cpp">#include &lt;iostream&gt;  // for std::cout and std::cin
 
 int main()
@@ -868,24 +868,24 @@ int main()
     std::cout << "You entered " << x << '\n';
     return 0;
 }</code></pre>
-                    
+
                     <p>
-                        When you run the program, it prompts you to enter a number. After you input a number and press enter, the number is assigned 
+                        When you run the program, it prompts you to enter a number. After you input a number and press enter, the number is assigned
                         to a variable. Then, the program prints a message showing the number you entered.
                     </p>
-                        
+
                     <p>
                         For example (entering the value 4 as input):
                     </p>
-                        
+
                     <pre class = "code"><code class = "cpp">Enter a number: 4
 You entered 4</code></pre>
-                        
+
                     <p>
-                        This is an easy way to get keyboard input from the user, and we 
+                        This is an easy way to get keyboard input from the user, and we
                         will use it in many of our examples going forward.
                     </p>
-                        
+
                     <div class = "tip">
                         <h1>
                             Tip
@@ -895,13 +895,13 @@ You entered 4</code></pre>
                             since pressing the enter key will automatically move the cursor to the next line.
                         </p>
                     </div>
-                        
+
                     <p>
-                        Just like how we can output more than one bit of text on a 
+                        Just like how we can output more than one bit of text on a
                         line, we can also do that with values
                     </p>
-                        
-                    <pre class = "code"><code class = "cpp">#include <iostream>  // for std::cout and std::cin
+
+                    <pre class = "code"><code class = "cpp">#include &lt;iostream&gt;  // for std::cout and std::cin
 
 int main()
 {
@@ -915,32 +915,87 @@ int main()
 
     return 0;
 }</code></pre>
-                        
+
                     <p>
                         This produces the output:
                     </p>
-                        
+
                     <pre class = "code"><code class = "cpp">Enter two numbers separated by a space: 5 6
 You entered 5 and 6</code></pre>
-                        
+
                     <p>
                         Values entered should be separated by whitespace (spaces, tabs, or newlines).
                     </p>
-                        
+
                     <div class = "advancedReaders">
                         <h1>
                             Advanced Readers
                         </h1>
                         <p>
-                            The C++ I/O library doesn't allow accepting input without pressing enter. 
-                            For this functionality, use third-party libraries like pdcurses, FXTUI, or notcurses. 
+                            The C++ I/O library doesn't allow accepting input without pressing enter.
+                            For this functionality, use third-party libraries like pdcurses, FXTUI, or notcurses.
                             Many GUI libraries also provide similar features.
                         </p>
                     </div>
-                        
+
                     <h1>
                         <span class = "highlightbox"><b>std::cin</b></span> is buffered.
                     </h1>
+                        
+                    <p>
+                        Outputting data occurs in two stages: First, data is added to the end of an output 
+                        buffer. Later, the buffer is flushed, sending the data from the front to the output 
+                        device, such as the console.
+                    </p>
+                        
+                    <p>
+                        Inputting data involves two stages: First, characters entered are added to the end of an input buffer (including the <span class = "highlightbox"><b>\n</b></span> 
+                        from pressing enter). Then, the extraction operator <span class = "highlightbox"><b>>></b></span> removes characters from the front, converts them into a value, 
+                        and assigns it to a variable for use.
+                    </p>
+                        
+                    <p>
+                        We’ll demonstrate this using the following program:
+                    </p>
+                        
+                    <pre class = "code"><code class = "cpp">#include &lt;iostream&gt;  // for std::cout and std::cin
+
+int main()
+{
+    std::cout << "Enter two numbers: ";
+
+    int x{};
+    std::cin >> x;
+
+    int y{};
+    std::cin >> y;
+
+    std::cout << "You entered " << x << " and " << y << '\n';
+
+    return 0;
+}</code></pre>
+                        
+                    <p>
+                        This program inputs values for two variables in separate statements.</p><p><b>Run #1:</b> When <span class="highlightbox"><b>std::cin >> x</b></span> is executed, the program waits 
+                        for input. Enter <span class="highlightbox"><b>4</b></span>, which goes into the input buffer, and <span class="highlightbox"><b>4</b></span> is extracted to <span class="highlightbox"><b>x</b></span>. 
+                        Then, when <span class="highlightbox"><b>std::cin >> y</b></span> is executed, the program waits again. Enter <span class="highlightbox"><b>5</b></span>, and the value <span class="highlightbox"><b>5</b></span> 
+                        is extracted to <span class="highlightbox"><b>y</b></span>. The program prints "You entered <span class="highlightbox"><b>4</b></span> and <span class="highlightbox"><b>5</b></span>."</p><p><b>Run #2:</b> 
+                        When <span class="highlightbox"><b>std::cin >> x</b></span> is executed, input <span class="highlightbox"><b>4</b></span> <span class="highlightbox"><b>5</b></span>. Only the <span class="highlightbox"><b>4</b></span> 
+                        is extracted to <span class="highlightbox"><b>x</b></span>, and when <span class="highlightbox"><b>std::cin >> y</b></span> is encountered, the <span class="highlightbox"><b>5</b></span> from the input buffer is 
+                        extracted to <span class="highlightbox"><b>y</b></span> without waiting for more input. The program prints "You entered <span class="highlightbox"><b>4</b></span> and <span class="highlightbox"><b>5</b></span>."
+                    </p>
+                        
+                    <h1>The basic extraction process</h1>
+                        
+                    <p>Here’s a simplified view of how operator <span class="highlightbox"><b>>></b></span> works for input:</p>
+                    <p>First, leading whitespace (spaces, tabs, and newlines at the front of the buffer) is discarded from the input buffer. This discards any unextracted newline character from a prior input.</p>
+                    <p>If the input buffer is empty, operator <span class="highlightbox"><b>>></b></span> waits for the user to enter more data, discarding leading whitespace again.</p>
+                    <p>Then, operator <span class="highlightbox"><b>>></b></span> extracts consecutive characters until it encounters a newline or an invalid character for the variable being extracted to.</p>
+                    <p>The result of the extraction is as follows:</p><p>If any characters were extracted, the extraction is successful, and they are converted into a value assigned to the variable (e.g., <span class="highlightbox"><b>x</b></span> 
+                      or <span class="highlightbox"><b>y</b></span>).
+                    </p>
+                    <p>If no characters could be extracted, the extraction fails, and the variable (e.g., <span class="highlightbox"><b>x</b></span>) is assigned 0 (as of C++11). Further extractions will fail until <span class="highlightbox"><b>std::cin</b></span> is cleared.</p>
+                    <p>Any non-extracted characters (including newlines) remain available for the next extraction attempt.</p>
 
 </body>
 </html
